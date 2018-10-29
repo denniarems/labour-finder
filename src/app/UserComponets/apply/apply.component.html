@@ -1,0 +1,68 @@
+
+<div class="apply">
+  <h1>Join Now</h1>
+    <form (ngsubmit)="click()">
+<br>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter First Name</mat-label>
+          <input name="fName" [(ngModel)]="labour.fName" required matInput placeholder="First Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Last Name</mat-label>
+          <input name="Lname" [(ngModel)]="labour.lName" required matInput placeholder="Last Name">
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Your Age</mat-label>
+          <input name="age" [(ngModel)]="labour.age" required type="number" matInput placeholder="Age">
+        </mat-form-field>
+        <br>
+      
+      <mat-radio-group required name="gender" class="example-radio-group" [(ngModel)]="labour.gender">
+        <mat-label required>Select Sex</mat-label> <br> 
+        <mat-radio-button required class="example-radio-button" *ngFor="let x of gender" [value]="x">
+          {{x}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input name="address1" [(ngModel)]="labour.address1" required matInput placeholder="Address line 1">
+      </mat-form-field>
+      
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input name="address2" [(ngModel)]="labour.address2" required matInput placeholder="Address line 2">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+          <mat-select required placeholder="Select District" name="district" [(ngModel)]="labour.district">  
+              <mat-option required *ngFor="let x of dist" [value]="x">
+              {{x}}</mat-option> 
+          </mat-select>
+      </mat-form-field> <br>
+       
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Known Jobs..</mat-label>
+            <input name="job" [(ngModel)]="labour.job" required type="text" matInput placeholder="seperate by ,">
+          </mat-form-field>
+          <br>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile number</mat-label>
+            <input name="mobile" [(ngModel)]="labour.mobile" required type="number" matInput placeholder="+91-xxxxx-xxxxx">
+          </mat-form-field>
+          <br>
+      
+          <mat-form-field appearance="outline">
+            <mat-label>Addar Id</mat-label>
+            <input name="addar" [(ngModel)]="labour.addar" required type="number" matInput placeholder="xxxx-xxxx-xxxx-xxxx">
+          </mat-form-field>
+          <br>
+          <button (click)="click()" type="submit" mat-raised-button color="primary">Register</button>
+      </form>
+</div>

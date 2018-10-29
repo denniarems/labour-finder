@@ -1,0 +1,24 @@
+.example-card {
+	max-width: 200px;
+	// padding: 0px;
+	margin: 15px;
+}
+h3 {
+	text-align: center;
+}
+button {
+	width: 216px;
+}
+.example-header-image {
+	background-size: cover;
+}
+.hire {
+	display: flex;
+	float: left;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+}
+mat-card-header {
+	height: 100px;
+}

@@ -1,0 +1,16 @@
+<div class="hire">
+    <mat-card *ngFor="let x of labour" class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{x.fName}}</mat-card-title>
+          <mat-card-subtitle>{{x.district}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://api.adorable.io/avatars/285/{{x.fName}}.png" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h3>{{x.job}}</h3>
+        </mat-card-content>
+        <mat-card-actions>
+            <a routerLink="/order"> <button (click)="hire(x.fName)" mat-raised-button color="primary"> Hire Now</button></a> 
+        </mat-card-actions>
+      </mat-card>
+</div>  
