@@ -12,12 +12,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
 	imports: [
 		MatButtonModule,
 		MatCheckboxModule,
 		MatCardModule,
 		MatSidenavModule,
+		MatTableModule,
 		MatMenuModule,
 		MatChipsModule,
 		MatDialogModule,
@@ -37,6 +39,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 		MatCardModule,
 		MatButtonModule,
 		MatCheckboxModule,
+		MatTableModule,
 		MatSidenavModule,
 		MatMenuModule,
 		MatChipsModule,

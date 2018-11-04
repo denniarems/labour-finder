@@ -9,6 +9,9 @@ export class LabourService {
 	getlabours() {
 		return this.http.get('http://localhost:3000/user/hire');
 	}
+	getlaboursfromadmin() {
+		return this.http.get('http://localhost:3000/admin/hire');
+	}
 	newlabour(item) {
 		return this.http.post('http://localhost:3000/user/apply', { labour: item }).subscribe((data) => {
 			console.log(data);

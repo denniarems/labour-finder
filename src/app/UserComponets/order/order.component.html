@@ -1,6 +1,6 @@
 
 <div class="apply">
-    <h1>We need ur details to contact {{name}} </h1>
+    <h1>We need ur details to contact {{labour}} </h1>
       <form (ngsubmit)="click()">
   <br>
           <mat-form-field appearance="outline">
@@ -9,7 +9,7 @@
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Enter Last Name</mat-label>
-            <input name="Lname"  required matInput placeholder="Last Name">
+            <input name="lName"  required matInput placeholder="Last Name">
           </mat-form-field>
      
        
@@ -33,7 +33,7 @@
         </mat-form-field> <br>
             <mat-form-field appearance="outline">
               <mat-label>Mobile number</mat-label>
-              <input name="mobile"  required type="number" matInput placeholder="+91-xxxxx-xxxxx">
+              <input name="mobile" required type="number" matInput placeholder="+91-xxxxx-xxxxx">
             </mat-form-field>
             <br>
             <button (click)="click()" type="submit" mat-raised-button color="primary">Hire Now</button>

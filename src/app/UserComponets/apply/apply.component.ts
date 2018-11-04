@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 import { ILabour } from 'src/app/LabourModel';
 import { LabourService } from 'src/app/Services/labour.service';
 

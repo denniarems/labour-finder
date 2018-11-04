@@ -1,5 +1,6 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { HireComponent } from '../hire/hire.component';
+import { Component } from '@angular/core';
+import { PassdataService } from 'src/app/Services/passdata.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-order',
@@ -8,15 +9,9 @@ import { HireComponent } from '../hire/hire.component';
 		'./order.component.scss'
 	]
 })
-export class OrderComponent implements AfterViewInit {
-	constructor() {}
-	@ViewChild(HireComponent) Hire;
-	name: string;
-	ngAfterViewInit() {
-		console.log(this.Hire.n);
-
-		this.name = this.Hire.n;
-	}
+export class OrderComponent {
+	constructor(private pd: PassdataService, private router: Router) {}
+	labour = this.pd.getData();
 	dist: string[] = [
 		'Alappuzha',
 		'Ernakulam',
@@ -33,4 +28,10 @@ export class OrderComponent implements AfterViewInit {
 		'Thrissur',
 		'Wayanad'
 	];
+
+	click() {
+		if (this.labour != null) {
+			alert(`Thank You ,${this.labour} will contact You Soon... Have a nice day`);
+		}
+	}
 }
